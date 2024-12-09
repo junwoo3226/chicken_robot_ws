@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo reference="imu_link">
+        <material>Gazebo/White</material>
+        <plugin name="imu" filename="libgazebo_ros_imu_sensor.so">
+            <ros>
+                <namespace>robot</namespace>
+                <remapping>imu:=/imu/data</remapping>
+            </ros>
+            <frame_name>imu_link</frame_name>
+            <update_rate>50</update_rate>
+        </plugin>
+    </gazebo>
+
+</robot>
